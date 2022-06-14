@@ -16,7 +16,7 @@ const NavBar = () => {
                 </div>
                 <div className='flex items-center'>
                     <ul className='hidden md:flex space-x-4'>
-                        <li>Article</li>
+                        <li> Article</li>
                         <li>Books</li>
                         <li>Questions</li>
                         <li>About</li>
