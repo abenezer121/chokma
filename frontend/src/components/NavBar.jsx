@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import { SearchIcon , MenuIcon, XIcon } from "@heroicons/react/outline";
+import { SearchIcon , MenuIcon, XIcon , ArrowsExpandIcon } from "@heroicons/react/outline";
 
 import logo from "../assets/logo/logo.png"
 const NavBar = () => {
@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className='w-full h-[70px] z-10 bg-slate-100 fixed shadow-sm  drop-shadow-lg'>
             <div className='px-3 w-full flex justify-between items-center w-full h-full'>
                 <div className='flex items-center '>
-                     <img src={logo } alt="/" className='w-20'/>  
+                    <ArrowsExpandIcon className='w-10' />
                     <p className='pl-2 text-3xl font-bold mr-4 sm:text-4xl'>Chokma.</p>
                 </div>
                 <div className='flex items-center'>
@@ -21,7 +21,6 @@ const NavBar = () => {
                         <li>Questions</li>
                         <li>About</li>
                         <li>Donate</li>
-                        
                     </ul>
                 </div>
                 <div className='flex items-center'>
