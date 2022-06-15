@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="md:mx-20">
                     <div className="flex flex-col align-middle">
                         <p className="mt-10 text-gray-700">Article</p>
-                        <h1 className="text-6xl	font-bold text-gray-700 mt-10">Lorem ipsum dolor sit amet consectetur?</h1>
+                        <h1 className="text-6xl	font-bold text-gray-700 mt-3">Lorem ipsum dolor sit amet consectetur?</h1>
                         <p className="mt-5 text-2xl font-bold text-gray-700	">Lorem ipsum dolor sit amet.</p>
                         <div className="flex items-center justify-between mt-5  ">
                             <div className="flex items-center">

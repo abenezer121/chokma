@@ -7,11 +7,11 @@ function App() {
   return (
     <div className='w-full h-screen '>
       <NavBar />
-      <Book/>
-      {/* <Home />
-      <Recent/>*/}
+      <Home />
+      <Recent/>
       <Footer/> 
     </div>
+    //<Book/>
   );
 }
 
