@@ -1,6 +1,6 @@
 import React from "react";
 import DropDown from './DropDown'
-import professional from "./../assets/professional.jpg"
+import BookCard from "./card/BookCard";
 import bookcover from "./../assets/bookcover.jpg"
 
 import { CheckIcon } from "@heroicons/react/outline";
@@ -21,44 +21,9 @@ const Book = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-4 lg:grid-cols-4 mt-5">
-                    
-                        <div className="w-[70%] m-auto mt-2">
-                            <img src={bookcover} alt="" className="" />
-                                 <div className="mt-2 text-center">
-                                <p>Kerry Kyriakou</p>
-                                <h2>Lorem ipsum dolor sit.</h2>
-                            </div>
-                        </div>
+            <div className="grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mt-10 mr-2">
+                <BookCard image={bookcover } username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} />   
                 
-                
-                       <div className="w-[70%] m-auto mt-2">
-                            <img src={bookcover} alt="" className="" />
-                            <div className="mt-2 text-center">
-                                <p>Kerry Kyriakou</p>
-                                <h2>Lorem ipsum dolor sit.</h2>
-                            </div>
-                        </div>
-                
-                
-                       <div className="w-[70%] m-auto mt-2">
-                            <img src={bookcover} alt="" className="" />
-                            <div className="mt-2 text-center">
-                                <p>Kerry Kyriakou</p>
-                                <h2>Lorem ipsum dolor sit.</h2>
-                            </div>
-                        </div>
-                
-                
-                       <div className="w-[70%] m-auto mt-2">
-                            <img src={bookcover} alt="" className="" />
-                            <div className="mt-2 text-center">
-                                <p>Kerry Kyriakou</p>
-                                <h2>Lorem ipsum dolor sit.</h2>
-                            </div>
-                        </div>
-                    
-
             </div>
         </div>
     )
