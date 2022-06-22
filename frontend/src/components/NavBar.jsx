@@ -59,10 +59,7 @@ const NavBar = () => {
                 <Link to="/book"><li className={navState.navLocation == "BOOK" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(book())}}>Books</li></Link>
                 <Link to="/question"><li className={navState.navLocation == "QUESTION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(question())}}>Questions</li></Link>
                 <Link to="/about"><li className={navState.navLocation == "ABOUT" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(about())}}>About</li></Link>
-                <Link to="/donate"><li className={navState.navLocation == "DONATION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(donation())}}>Donate</li></Link>
-                
-              
-                        
+                <Link to="/donate"><li className={navState.navLocation == "DONATION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(donation())}}>Donate</li></Link> 
             </ul>}
                 
               

@@ -8,6 +8,7 @@ import ArticlePage from "./ArticlePage"
 import Question from './../pages/Question'
 import About from "./../pages/About"
 import Donate from "./../pages/Donate"
+import Admin from "./../pages/Admin"
 import QuestionDescription from "./QuestionDescription";
 import BookDescription from "./BookDescription"
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
