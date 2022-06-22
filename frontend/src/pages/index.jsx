@@ -11,7 +11,8 @@ import Donate from "./../pages/Donate"
 import Admin from "./../pages/Admin"
 import QuestionDescription from "./QuestionDescription";
 import BookDescription from "./BookDescription"
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
+//
 const RootPage = () => {
     return (
         <div className='w-full h-screen '>
