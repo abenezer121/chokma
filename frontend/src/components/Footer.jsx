@@ -9,7 +9,7 @@ import {
 }  from 'react-icons/fa' 
 const Footer = () => {
     return (
-        <div className="w-full   mt-5 pb-10 bg-slate-100/90 ">
+        <div className="w-full   mt-5 pt-1 pb-10 bg-slate-100/90  sticky top-[100vh] ">
             <div className="grid   md:grid-cols-3   mx-5  mt-20">
                 <div className="flex flex-col items-center mt-5 m-auto text-md font-bold"><p>Fear of the Lord is the foundation of true knowledge, but fools despise wisdom and discipline.</p> </div>
                 <div className="flex flex-col items-center mt-5">

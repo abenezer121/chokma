@@ -3,7 +3,7 @@ import professional from "./../assets/professional.jpg"
 
 const ArticlePage = (props) => {
     return (
-        <div className="w-full pt-10  ">
+        <div className="w-full  ">
             <div className="w-full py-20 bg-black flex items-center text-center">
                 <h2 className="text-white text-6xl m-auto font-bold">Lorem ipsum dolor sit amet consectetur.</h2>
             </div>

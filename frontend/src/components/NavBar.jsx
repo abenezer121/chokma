@@ -1,8 +1,10 @@
 import React , {useState} from 'react'
 import { SearchIcon , MenuIcon, XIcon , ArrowsExpandIcon } from "@heroicons/react/outline";
 import { useSelector , useDispatch} from 'react-redux'
-
+import { home, article, book, question, about, donation } from "./../redux/actions/navigation"
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo/logo.png"
+
 const NavBar = () => {
 
     
@@ -14,7 +16,7 @@ const NavBar = () => {
     const dispatch = useDispatch()
     console.log(navState.navLocation)
     return (
-        <div className='w-full h-[70px] z-10 bg-slate-100 fixed shadow-sm  drop-shadow-lg'>
+        <div className='w-full h-[70px] z-10 bg-slate-100 sticky top-0 z-50 shadow-sm  drop-shadow-lg'>
             {search ? <div className='px-3 w-full flex justify-between items-center w-full h-full'>
                 <div className='flex justify-between '>
                     <SearchIcon className='w-5' />
@@ -31,12 +33,12 @@ const NavBar = () => {
                 </div>
                 <div className='flex items-center h-full'>
                     <ul className='hidden md:flex space-x-4'>
-                        <li className={navState.navLocation == "HOME" ? 'text-black-800 font-bold' : 'text-gray-500'}> Home</li>
-                        <li className={navState.navLocation == "ARTICLE" ? 'text-black-800 font-bold' : 'text-gray-500'}> Article</li>
-                        <li className={navState.navLocation == "BOOK" ? 'text-black-800 font-bold' : 'text-gray-500'}>Books</li>
-                        <li className={navState.navLocation == "QUESTION" ? 'text-black-800 font-bold' : 'text-gray-500'}>Questions</li>
-                        <li className={navState.navLocation == "ABOUT" ? 'text-black-800 font-bold' : 'text-gray-500'}>About</li>
-                        <li className={navState.navLocation == "DONATION" ? 'text-black-800 font-bold' : 'text-gray-500'}>Donate</li>
+                        <Link to="/"><li className={navState.navLocation == "HOME" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(home())}}> Home</li></Link>
+                        <Link to="/article"><li className={navState.navLocation == "ARTICLE" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(article())}}> Article</li></Link>
+                        <Link to="/book"><li className={navState.navLocation == "BOOK" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(book())}}>Books</li></Link>
+                        <Link to="/question"><li className={navState.navLocation == "QUESTION" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(question())}}>Questions</li></Link>
+                        <Link to="/about"><li className={navState.navLocation == "ABOUT" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(about())}}>About</li></Link>
+                        <Link to="/donate"><li className={navState.navLocation == "DONATION" ? 'text-black-800 font-bold' : 'text-gray-500'} onClick = {()=>{dispatch(donation())}}>Donate</li></Link>
                     </ul>
                 </div>
                 <div className='flex items-center'>
@@ -52,12 +54,12 @@ const NavBar = () => {
             </div>}
             {search ? "" : <ul className={!nav ? 'hidden' : 'absolute bg-slate-100 bg-opacity-100 shadow-xl w-full px-8'}>
                 
-                <li className={navState.navLocation == "HOME" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}> Home</li>
-                        <li className={navState.navLocation == "ARTICLE" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}> Article</li>
-                        <li className={navState.navLocation == "BOOK" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}>Books</li>
-                        <li className={navState.navLocation == "QUESTION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}>Questions</li>
-                        <li className={navState.navLocation == "ABOUT" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}>About</li>
-                <li className={navState.navLocation == "DONATION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'}>Donate</li>
+                <Link to="/"><li className={navState.navLocation == "HOME" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(home())}}> Home</li></Link>
+                <Link to="/article"><li className={navState.navLocation == "ARTICLE" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(article())}}> Article</li></Link>
+                <Link to="/book"><li className={navState.navLocation == "BOOK" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(book())}}>Books</li></Link>
+                <Link to="/question"><li className={navState.navLocation == "QUESTION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(question())}}>Questions</li></Link>
+                <Link to="/about"><li className={navState.navLocation == "ABOUT" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(about())}}>About</li></Link>
+                <Link to="/donate"><li className={navState.navLocation == "DONATION" ? 'text-xl text-black-500 py-3 border-b-2 border-black-500 font-bold' : 'text-xl text-gray-500 py-3 border-b-2 border-black-500'} onClick = {()=>{dispatch(donation())}}>Donate</li></Link>
                 
               
                         
