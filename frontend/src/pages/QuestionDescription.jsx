@@ -1,7 +1,7 @@
 import React from "react"
 import professional from "./../assets/professional.jpg"
 
-const QuestionPage = (props) => {
+const QuestionDescription = (props) => {
     return (
         <div className="w-full">
             <div className="w-full py-20 bg-black flex items-center text-center">
@@ -11,7 +11,7 @@ const QuestionPage = (props) => {
                 <div className="flex">
                     <img src={professional} alt="" className="w-10 h-10 rounded-full" />
                     <div className="flex items-center mx-3">
-                        <p>Article by <span>Lorem, ipsum.</span></p>
+                        <p>Answered by <span>Lorem, ipsum.</span></p>
                     </div>
                 </div>
                 <div className="mt-5">
@@ -24,4 +24,4 @@ const QuestionPage = (props) => {
         </div>
     );
 }
-export default QuestionPage;
+export default QuestionDescription;

@@ -6,6 +6,7 @@ import professional from "./../assets/professional.jpg"
 import {
     ArrowSmRightIcon,
 } from "@heroicons/react/outline"
+import { Link } from "react-router-dom";
 import ArticleCard from "./../components/card/ArticleCard";
 const Home = () => {
     return (
@@ -47,10 +48,10 @@ const Home = () => {
                         hidden sm:flex
                         if it is only small apply flex or hide all
                     */}
-                            <ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> 
-                            <ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> 
-                            <ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> 
-                            <ArticleCard image={professional } title={"Lorem ipsum dolor sit amet?" } date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?" } username={"David Mathis" } userphoto={ professional} /> 
+                            <Link to ="articlepage"><ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> </Link> 
+                            <Link to ="articlepage"><ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> </Link>
+                            <Link to ="articlepage"><ArticleCard image={professional} title={"Lorem ipsum dolor sit amet?"} date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?"} username={"David Mathis"} userphoto={professional} /> </Link>
+                            <Link to ="articlepage"><ArticleCard image={professional } title={"Lorem ipsum dolor sit amet?" } date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?" } username={"David Mathis" } userphoto={ professional} /> </Link>
                 </div>
             </div>
             <div className="flex justify-evenly mt-6">

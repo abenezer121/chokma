@@ -3,7 +3,7 @@ import DropDown from '../components/dropdown/DropDown'
 import BookCard from "../components/card/BookCard";
 import bookcover from "./../assets/bookcover.jpg"
 
-import { CheckIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 const Book = () => {
     return (
         <div className="w-full">
@@ -22,14 +22,14 @@ const Book = () => {
             </div>
 
             <div className="grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mt-10 mr-2">
-                <BookCard image={bookcover } username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} />   
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
-                <BookCard image={bookcover } username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> 
+                <Link to ="/bookdescription"><BookCard image={bookcover } username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>  
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover} username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
+                <Link to ="/bookdescription"><BookCard image={bookcover } username={"Kerry Kyriakou"} title={"Lorem ipsum dolor sit."} /> </Link>
             </div>
         </div>
     )
