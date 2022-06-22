@@ -14,7 +14,7 @@ const NavBar = () => {
     const searchClick = () => setSearch(!search)
     const navState = useSelector(state => state.navigation)
     const dispatch = useDispatch()
-    console.log(navState.navLocation)
+
     return (
         <div className='w-full h-[70px] z-10 bg-slate-100 sticky top-0 z-50 shadow-sm  drop-shadow-lg'>
             {search ? <div className='px-3 w-full flex justify-between items-center w-full h-full'>
