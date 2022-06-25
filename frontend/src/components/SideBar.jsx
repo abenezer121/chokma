@@ -19,25 +19,25 @@ const SideBar = () => {
         </Menu.Item>
 
         <Menu.Item key="2">
-          <Link to={"/"}>
+          <Link to={"/user"}>
             <span>Users</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item key="3">
-          <Link to={"/"}>
+          <Link to={"/article"}>
             <span>Article</span>
           </Link>
         </Menu.Item>
                 
         <Menu.Item key="4">
-          <Link to={"/"}>
+          <Link to={"/question"}>
             <span>Question</span>
           </Link>
         </Menu.Item>
                 
         <Menu.Item key="5">
-          <Link to={"/"}>
+          <Link to={"/book"}>
             <span>Book</span>
           </Link>
         </Menu.Item>

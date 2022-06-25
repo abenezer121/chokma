@@ -13,6 +13,13 @@ import QuestionDescription from "./QuestionDescription";
 import BookDescription from "./BookDescription"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
 import { useSelector , useDispatch} from 'react-redux'
+import HomeAdmin from "./Admin/HomeAdmin";
+import UserAdmin from "./Admin/UserAdmin";
+import BookAdmin from "./Admin/BookAdmin";
+import QuestionAdmin from "./Admin/QuestionAdmin";
+import ArticleAdmin from "./Admin/ArticleAdmin";
+import SideBar from "../components/SideBar";
+
 
 const RootPage = () => {
     const navState = useSelector(state => state.usertype)
@@ -41,15 +48,33 @@ const RootPage = () => {
     const adminRouter = () => {
         return (
             <Router>
-                <Routes>
-                    <Route path="/" element = {<Admin />}/>
-                </Routes>
+                <div className="flex">
+                  
+                    <div className="">
+                        <SideBar /> 
+                     
+                    </div>  
+                    <div className="bg-yellow-200 w-full h-screen">
+                         <Routes>
+                            <Route path="/" element={<HomeAdmin/>} />
+                            <Route path="/user" element={<UserAdmin/>} />
+                            <Route path="/book" element={<BookAdmin/>} />
+                            <Route path="/question" element={<QuestionAdmin/>} />
+                            <Route path="/article" element={<ArticleAdmin/>} />
+                        </Routes>
+                        
+                    </div>
+                       
+               </div>
+               
+                
+
             </Router>
         )
     }
     return (
         <div className='w-full h-screen '>
-            { navState.userType == "as" ? adminRouter() : userRouter() }
+            { navState.userType == "USER" ? adminRouter() : userRouter() }
         </div>
     )
 }
