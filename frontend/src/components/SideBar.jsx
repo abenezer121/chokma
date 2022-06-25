@@ -13,31 +13,31 @@ const SideBar = () => {
         style={{ height: "100%", borderRight: 0 }}
       >
         <Menu.Item key="1">
-          <Link to={"/home/dashboard"}>
+          <Link to={"/"}>
             <span>Home</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item key="2">
-          <Link to={"/home/dashboard"}>
+          <Link to={"/"}>
             <span>Users</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item key="3">
-          <Link to={"/home/dashboard"}>
+          <Link to={"/"}>
             <span>Article</span>
           </Link>
         </Menu.Item>
                 
         <Menu.Item key="4">
-          <Link to={"/home/dashboard"}>
+          <Link to={"/"}>
             <span>Question</span>
           </Link>
         </Menu.Item>
                 
         <Menu.Item key="5">
-          <Link to={"/home/dashboard"}>
+          <Link to={"/"}>
             <span>Book</span>
           </Link>
         </Menu.Item>

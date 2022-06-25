@@ -1,9 +1,9 @@
 import RootPage from "./pages";
-import Admin from "./pages/Admin";
-import { useSelector , useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from "react-router-dom";
 
 function App() {
-  const navState = useSelector(state => state.usertype)
+  
   return (
     <RootPage /> 
   );

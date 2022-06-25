@@ -49,7 +49,7 @@ const RootPage = () => {
     }
     return (
         <div className='w-full h-screen '>
-            { navState.userType == "USER" ? adminRouter() : userRouter() }
+            { navState.userType == "as" ? adminRouter() : userRouter() }
         </div>
     )
 }

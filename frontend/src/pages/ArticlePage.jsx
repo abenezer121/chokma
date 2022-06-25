@@ -1,7 +1,10 @@
-import React from "react"
+import React , {useEffect} from "react"
 import professional from "./../assets/professional.jpg"
 
 const ArticlePage = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="w-full  ">
             <div className="w-full py-20 bg-black flex items-center text-center">

@@ -1,10 +1,13 @@
-import React from "react";
+import React , {useEffect} from "react";
 import DropDown from '../components/dropdown/DropDown'
 import BookCard from "../components/card/BookCard";
 import bookcover from "./../assets/bookcover.jpg"
 
 import { Link } from "react-router-dom";
 const Book = () => {
+        useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="w-full">
             <div className="grid md:grid-cols-2 mx-2=[1240px] mt-10">
