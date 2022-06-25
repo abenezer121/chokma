@@ -1,14 +1,15 @@
 import React from "react";
-
+import { useSelector , useDispatch} from 'react-redux'
 import front from "./../assets/front.jpg"
-import facebookcover from "./../assets/logo/facebook_cover_photo_1.png"
 import professional from "./../assets/professional.jpg"
 import {
     ArrowSmRightIcon,
 } from "@heroicons/react/outline"
 import { Link } from "react-router-dom";
 import ArticleCard from "./../components/card/ArticleCard";
+import { home, article, book, question, about, donation } from "./../redux/actions/navigation"
 const Home = () => {
+    const dispatch = useDispatch()
     return (
         <div className="w-full">
             <div className="grid md:grid-cols-1 lg:grid-cols-2 mx-10 mt-20">
@@ -26,7 +27,8 @@ const Home = () => {
                                 <img src={professional} className="rounded-full h-8 w-8" alt="/" />
                                 <p className="ml-2 text-sm">David Mathis</p>
                             </div>
-                            <button className="bg-red-800 py-2 px-10 rounded-md text-white">Read More</button> 
+                         
+                            <Link to ="/articlepage" className="bg-red-800 py-2 px-10 rounded-md text-white">Read More </Link> 
                         </div>
                     </div>
                    
@@ -54,8 +56,8 @@ const Home = () => {
                             <Link to ="articlepage"><ArticleCard image={professional } title={"Lorem ipsum dolor sit amet?" } date={"JUN 13,2022"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo. Deserunt laborum architecto nobis placeat?" } username={"David Mathis" } userphoto={ professional} /> </Link>
                 </div>
             </div>
-            <div className="flex justify-evenly mt-6">
-                <button className="py-3 px-9 border "> <p className="flex ">More <ArrowSmRightIcon className="w-5" /></p></button>    
+            <div className="flex justify-evenly mt-6">   
+                <Link to ="/article" className="py-3 px-9 border"  onClick = {()=>{dispatch(article());  }}><p className="flex ">More <ArrowSmRightIcon className="w-5" /></p></Link>        
             </div>
                 
       </div> 

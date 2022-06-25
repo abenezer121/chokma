@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import ArticleCard from "../components/card/ArticleCard";
 import professional from "./../assets/professional.jpg"
 
 
+
+
 const Article = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <div className="w-full ">

@@ -12,12 +12,15 @@ import Admin from "./../pages/Admin"
 import QuestionDescription from "./QuestionDescription";
 import BookDescription from "./BookDescription"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
-//
+import { useSelector , useDispatch} from 'react-redux'
+
 const RootPage = () => {
-    return (
-        <div className='w-full h-screen '>
+    const navState = useSelector(state => state.usertype)
+    console.log(navState)
+    const userRouter = () => {
+        return (
             <Router>
-                <NavBar />
+                <NavBar />     
                 <Routes >
                     <Route path="/" element = {<Home />}/>
                     <Route path="/question" element = {<Question />}/>
@@ -27,11 +30,26 @@ const RootPage = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/donate" element = {<Donate />}/>
                     <Route path="/book" element={<Book />} />
-                    <Route path="/questoindescription" element={<QuestionDescription/>}/>
+                    <Route path="/questoindescription" element={<QuestionDescription />} />
+                   
                 </Routes >   
-                <Footer/> 
+                 <Footer />
             </Router>
-            
+        )
+    }
+
+    const adminRouter = () => {
+        return (
+            <Router>
+                <Routes>
+                    <Route path="/" element = {<Admin />}/>
+                </Routes>
+            </Router>
+        )
+    }
+    return (
+        <div className='w-full h-screen '>
+            { navState.userType == "as" ? adminRouter() : userRouter() }
         </div>
     )
 }
