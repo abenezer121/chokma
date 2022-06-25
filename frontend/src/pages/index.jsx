@@ -20,7 +20,6 @@ import QuestionAdmin from "./Admin/QuestionAdmin";
 import ArticleAdmin from "./Admin/ArticleAdmin";
 import SideBar from "../components/SideBar";
 
-
 const RootPage = () => {
     const navState = useSelector(state => state.usertype)
     console.log(navState)
@@ -54,7 +53,7 @@ const RootPage = () => {
                         <SideBar /> 
                      
                     </div>  
-                    <div className="bg-yellow-200 w-full h-screen">
+                    <div className="w-full h-screen">
                          <Routes>
                             <Route path="/" element={<HomeAdmin/>} />
                             <Route path="/user" element={<UserAdmin/>} />
